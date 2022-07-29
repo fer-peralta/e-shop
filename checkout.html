@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERALTA Entregable 6 - Checkout</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script defer src="./scripts/objetos.js"></script>
+    <script defer src="./scripts/checkout.js"></script>
+    <script defer src="./scripts/funciones_checkout.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/dab5819558.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid navSpace">
+            <a class="navbar-brand" href="#">E-shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <!-- enlace a productos -->
+                  <a class="nav-link" href="./index.html#listaProductos">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <!-- enlace a nosotros -->
+                  <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <!-- enlace a contacto -->
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              <!-- boton carrito -->
+              <a href="#" class="ms-5 me-5" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i><span id="contadorCarrito">0</span></a>
+            </div>
+          </div>    
+
+          <!-- Modal Carrito start -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="contenedorCarrito">
+                  <!-- aca va el contenido del carrito -->
+                </div>
+                <div class="modal-body">
+                  <p id="precioCarrito">Precio total: $<span id="precioTotal">0</span></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Carrito end -->  
+
+        </nav>
+    </header>
+    <main>
+      <div>          
+          <section class="col-10 navHeader">
+            <form id="login">
+              <div class="mb-3 col-3">
+                <label for="loginEmail" class="form-label">Ingrese su correo electrónico</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="lio@messi.com" required>
+              </div>
+              <div class="mb-3 col-3">
+                <label for="loginPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="micontraseña" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+          </section>
+      </div>
+      <section class="col-10 navHeader">
+        <form id="formDatos" class="row g-3 d-none">
+          <h2>Ingrese los datos de envío</h2>
+          <div class="col-md-4">
+            <label for="inputNombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="inputNombre" placeholder="Lionel Andrés" required>
+          </div>
+          <div class="col-md-4">
+            <label for="inputApellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="inputApellido" placeholder="Messi" required>
+          </div>
+          <div class="col-md-4">
+            <label for="inputEmail" class="form-label">Correo electrónico</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="spanEmail">@</span>
+              <input type="text" class="form-control" id="inputEmail" aria-describedby="inputGroupPrepend" placeholder="lio@messi.com" required>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="selectProvincia" class="form-label">Provincia</label>
+            <select class="form-select" id="selectProvincia" required>
+              <option selected disabled value="">Elija Provincia</option>
+              <option>Buenos Aires</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="inputLocalidad" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputLocalidad" placeholder="Paris" required>
+          </div>
+          <div class="col-md-6">
+            <label for="inputCalle" class="form-label">Calle</label>
+            <input type="text" class="form-control" id="inputCalle" placeholder="24 Rue du Commandant Guilbaud" required>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
+      
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

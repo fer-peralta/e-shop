@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+a span {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.navHeader {
+    margin-left: 15vh;
+    margin-right: 15vh;
+}
+
+main {
+    margin-top: 100px;
+}
+
+nav.navbar {
+    background-color: #232323!important;
+    
+}
+
+.nav-link {
+    color: wheat!important;
+    font-weight: bold!important;
+}
+
+.navbar-brand {
+    color: wheat!important;
+    font-weight: bold!important;
+}
+
+.navSpace {
+
+    margin-left: 15vh!important;
+    margin-right: 15vh!important;
+
+}
+
+h2 {
+
+    text-align: center;
+    margin-top: 50px!important;
+    margin-bottom: 50px!important;
+
+}
+
+.about_par {
+
+    margin-left: 15vh!important;
+    margin-right: 15vh!important;
+
+}
+
+#contact_section form {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#contact_section input, #contact_section textarea {
+    
+    margin: auto!important;
+    margin-top: 10px!important;
+    margin-bottom: 10px!important;
+    display: flex;
+    width: 300px;
+    text-align: center;
+
+
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERALTA Entregable 6 - Index</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script defer src="./scripts/funciones_index.js"></script>
+    <script defer src="./scripts/objetos.js"></script>
+    <script defer src="./scripts/index.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/dab5819558.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid navSpace">
+            <a class="navbar-brand" href="./index.html">E-shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <!-- enlace a productos -->
+                  <a class="nav-link" href="#listaProductos">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <!-- enlace a nosotros -->
+                  <a class="nav-link" href="#about_section">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <!-- enlace a contacto -->
+                  <a class="nav-link" href="#contact_section">Contacto</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+              <!-- boton carrito -->
+              <a href="#" class="ms-5 me-5" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i><span id="contadorCarrito">0</span></a>
+            </div>
+          </div>    
+
+          <!-- Modal Carrito start -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="contenedorCarrito">
+                  <!-- aca va el contenido del carrito -->
+                </div>
+                <div class="modal-body">
+                  <p id="precioCarrito">Precio total: $<span id="precioTotal">0</span></p>
+                </div>
+                <div class="modal-body">
+                  <p id="precioCarrito"><a href="./checkout.html">Ir a pagos</a></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Carrito end -->  
+
+        </nav>
+    </header>
+    <main>
+      <div class="row gx-0 mb-5">
+          <section class="col-3">
+              <!-- acá va un menú -->
+          </section>
+          <section section class="col-7" id="listaProductos">
+              <div class="row row-cols-1 row-cols-md-3 g-5" id="contenedorProductos"> 
+                          
+              </div>
+          </section>
+          <section id="about_section">
+            <h2>Un poco de nosotros</h2>
+            <p class="about_par">Somos una empresa dedicada a la venta de tecnología de más de 10 años de experiencia en el mercado. Contamos con un amplio grupo de profesionales que podrá asesorarte y resolver todas tus consultas.</p>
+            <p class="about_par">Todo comenzó en un garage en Bariloche comprando unos pocos repuestos informáticos y vendiendo a amigos y vecinos por mail y teléfono. Hoy, contamos con una de las tiendas online más visitadas del mercado y continua el crecimiento de este sueño.</p>
+          </section>
+          <section id="contact_section">
+            <h2>Contactanos</h2>
+            <div>
+              <form>
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Apellido">
+                <input type="number" placeholder="Teléfono">
+                <input type="email" placeholder="Email">
+                <textarea cols="20" rows="8" placeholder="Ingrese su consulta"></textarea>
+              </form>
+            </div>  
+          </section>
+      </div>
+    </main>
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Enterate de nuestras novedades: </strong>
+                </p>
+              </div>
+              <!--Grid column-->
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="form5Example29" class="form-control" />
+                  <label class="form-label" for="form5Example29">Email:</label>
+                </div>
+              </div>
+              <!--Grid column-->
+    
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-light mb-4">
+                  Subscribite
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="https://www.linkedin.com/in/ferperalta/">Fernando Peralta</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+</body>
+</html>
